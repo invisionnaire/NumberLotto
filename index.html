@@ -8,31 +8,61 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-VhBcF/php0Z/P5ZxlxaEx1GwqTQVIBu4G4giRWxTKOCjTxsPFETUDdVL5B6vYvOt" crossorigin="anonymous">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
     <title>Invisionnaire: Number Lotto</title>
   </head>
   <body class="bg-dark text-white">
-    <div class="container mt-1 mt-md-2 col-md-6">
-      <div class="card" style="height: 90vh;">
-        <div class="card-header bg-primary">
-          <h1 class="card-title">This is a test</h1>
-        </div>
-        <div class="card-body bg-dark">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">Text</p>
-        </div>
-        <div class="card-footer bg-info">
-          <h3>test</h3>
-        </div>
+<div class="row">
+      <div class="col-xs-12 col-md-4">
+            <div class="card mt-1 mt-md-2 ml-md-3" style="height: 90vh;">
+              <div class="card-header bg-primary">
+                <h1 class="card-title text-center">Number Lotto</h1>
+              </div>
+              <div class="card-body text-dark text-center">
+                <h4 class="card-title"><small>LVL</small> <span id="game_level"></span></h4>
+                <h1 class="card-text"><span id="numberSelected">?</span></h1>
+                <h3><span id="strikes"></span></h3>
+                <h3>Choose a number between 1 and <span id="maxNum"></span></h3>
+                <div class="form-group">
+                  <label for="inputNumber"></label>
+                  <input type="number" class="form-control form-control-sm" name="" id="inputNumber" aria-describedby="Number that was chosen">
+                </div>
+                <button class="btn btn-primary">Submit</button>
+              </div>
+              <div class="card-footer bg-info d-flex justify-content-between">
+                <h3><span id="playerBalance"></span> Balance: $00.00</h3>
+                <button class="btn btn-outline-light float-right">Withdraw</button>
+              </div>
+            </div>
       </div>
-    </div>
 
-    <footer class="container-fluid d-flex bg-danger mt-4">
-      <p class="align py-auto">Powered by Invisionnaire</p>
-    </footer>
-        
+      <div class="col-7 mt-2 d-none d-lg-block text-dark">
+        <ul class="list-group">
+          <li class="list-group-item active">To-do List</li>
+          <li class="list-group-item">Need to finish modals for the 3 stages. Win/Lose and Ad play. Also need to do another modal for the withdraw button at then end.</li>
+          <li class="list-group-item">Add an info button with information like odds and runes. Maybe it can do go on the top right corner of the game.</li>
+          <li class="list-group-item">Need to make it so that it shows a "?" when it starts but when they click on the submit it shows the numberSelected</li>
+          <li class="list-group-item">Change the design to make it look like a cartoon cup head inspire game.</li>
+          <li class="list-group-item"></li>
+          <li class="list-group-item"></li>
+          <li class="list-group-item"></li>
+          <li class="list-group-item"></li>
+          <li class="list-group-item"></li>
+          <li class="list-group-item"></li>
+        </ul>
+      </div>
+
+     
+
+   
+
+
+
     <!-- Optional JavaScript -->
     <script src="js/main.js"></script>
 
