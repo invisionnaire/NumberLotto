@@ -19,13 +19,31 @@ if (gameLevel === 1) {
     document.querySelector('#game_level').innerHTML = 1; 
     document.querySelector('#maxNum').innerHTML = maxNumber;
     document.querySelector('#numberSelected').innerHTML = selectedNumber;
-    
+
+    const secretWord = selectedNumber;
+    let message = 'Wrong number, pick again :(';
     gameTry = '';
+   
+
+// Tries remaining. It should look at the number input, then see if its the same as the number selected and if it is the alert should say "you win" if not it should say "You lose" as you show the right or wrong number it should decrease the number of tries in the gametry i.
+
     for (let t = 1; t <= 2; t++) {
         gameTry += ` <i class="fas fa-hexagon"></i> `;
         
+        for ( let i = t; i >= 1; i-- ) {  
+            let guess = prompt(`Chose a number? You have ${i} tries.`);
+            if ( guess === secretWord ) {
+                message = 'You win!';
+            }
+        }
+        alert(message);
         };
+        console.log(selectedNumber);
     
+   
+
+        
+
     document.querySelector('#strikes').innerHTML = gameTry; 
 
 
