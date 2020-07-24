@@ -1,171 +1,159 @@
- 
-let gameLevel = Math.floor(Math.random() * 5 + 1);
+ let gameLevel = Math.floor(Math.random() * 5 + 1);
 
-if (gameLevel === 1) {
-    selectedNumber = Math.floor(Math.random() * 10 + 1);
-    numberInput = '';
-    winner = '';
-    
-        if (selectedNumber === +numberInput) {
-            winner = "you WIN!";
-        } else {
-            winner = "you Lose!";
-        };
+ if (gameLevel === 1) {
+     selectedNumber = Math.floor(Math.random() * 10 + 1);
+     numberInput = '';
+     winner = '';
 
-    gameReward = .25; 
-    maxNumber = 10;
+     if (selectedNumber === +numberInput) {
+         winner = "you WIN!";
+     } else {
+         winner = "you Lose!";
+     };
 
-    // print to html
-    document.querySelector('#game_level').innerHTML = 1; 
-    document.querySelector('#maxNum').innerHTML = maxNumber;
-    document.querySelector('#numberSelected').innerHTML = selectedNumber;
+     gameReward = .25;
+     maxNumber = 10;
 
-    const secretWord = selectedNumber;
-    let message = 'Wrong number, pick again :(';
-    gameTry = '';
-   
-
-// Tries remaining. It should look at the number input, then see if its the same as the number selected and if it is the alert should say "you win" if not it should say "You lose" as you show the right or wrong number it should decrease the number of tries in the gametry i.
-
-    for (let t = 1; t <= 2; t++) {
-        gameTry += ` <i class="fas fa-hexagon"></i> `;
-        
-        for ( let i = t; i >= 1; i-- ) {  
-            let guess = prompt(`Chose a number? You have ${i} tries.`);
-            if ( guess === secretWord ) {
-                message = 'You win!';
-            }
-        }
-        alert(message);
-        };
-        console.log(selectedNumber);
-    
-   
-
-        
-
-    document.querySelector('#strikes').innerHTML = gameTry; 
-
-
-    
-} else if (gameLevel === 2) {
-    selectedNumber = Math.floor(Math.random() * 30 + 1);
-    numberInput = '';
-    
-    if (selectedNumber === +numberInput) {
-        winner = "you WIN!";
-    } else {
-        winner = "you Lose!";
-    };
-
-    let gameReward = .50;   
-    let maxNumber = 30;
-
-    // print to html
-    document.querySelector('#game_level').innerHTML = 2;
-    document.querySelector('#maxNum').innerHTML = maxNumber;
-    document.querySelector('#numberSelected').innerHTML = selectedNumber;
-
-    gameTry = '';
-    for (let t = 1; t <= 2; t++) {
-        gameTry += ` <i class="fas fa-hexagon"></i> `;
-        
-        };
-    
-    document.querySelector('#strikes').innerHTML = gameTry;
+     // print to html
+     document.querySelector('#game_level').innerHTML = 1;
+     document.querySelector('#maxNum').innerHTML = maxNumber;
+     document.querySelector('#numberSelected').innerHTML = selectedNumber;
 
 
 
-    
-} else if (gameLevel === 3) {
-    selectedNumber = Math.floor(Math.random() * 60 + 1);
-    numberInput = '';
-    winner = '';
-    
-    if (selectedNumber === +numberInput) {
-        winner = "you WIN!";
-    } else {
-        winner = "you Lose!";
-    };
+     console.log(selectedNumber); //REMOVE ME WHEN DONE
 
-    gameReward = .75; 
-    maxNumber = 60;
 
-    // print to html
-    document.querySelector('#game_level').innerHTML = 3;
-    document.querySelector('#maxNum').innerHTML = maxNumber;
-    document.querySelector('#numberSelected').innerHTML = selectedNumber;
+     const secretWord = selectedNumber;
+     let message = 'Wrong number, pick again :(';
+     gameTry = '';
 
-    gameTry = '';
-    for (let t = 1; t <= 2; t++) {
-        gameTry += ` <i class="fas fa-hexagon"></i> `;
-        
-        };
-    
-    document.querySelector('#strikes').innerHTML = gameTry;
+
+     
+
+
+
+     document.querySelector('#strikes').innerHTML = gameTry;
+
+
+
+ } else if (gameLevel === 2) {
+     selectedNumber = Math.floor(Math.random() * 30 + 1);
+     numberInput = '';
+
+     if (selectedNumber === +numberInput) {
+         winner = "you WIN!";
+     } else {
+         winner = "you Lose!";
+     };
+
+     let gameReward = .50;
+     let maxNumber = 30;
+
+     // print to html
+     document.querySelector('#game_level').innerHTML = 2;
+     document.querySelector('#maxNum').innerHTML = maxNumber;
+     document.querySelector('#numberSelected').innerHTML = selectedNumber;
+
+     gameTry = '';
+     for (let t = 1; t <= 2; t++) {
+         gameTry += ` <i class="fas fa-hexagon"></i> `;
+
+     };
+
+     document.querySelector('#strikes').innerHTML = gameTry;
 
 
 
 
-    
-} else if (gameLevel === 4) {
-    selectedNumber = Math.floor(Math.random() * 80 + 1);
-    numberInput = '';
-    winner = '';
-    
-    if (selectedNumber === +numberInput) {
-        winner = "you WIN!";
-    } else {
-        winner = "you Lose!";
-    };
+ } else if (gameLevel === 3) {
+     selectedNumber = Math.floor(Math.random() * 60 + 1);
+     numberInput = '';
+     winner = '';
 
-    gameReward = 1; 
-    maxNumber = 80;
+     if (selectedNumber === +numberInput) {
+         winner = "you WIN!";
+     } else {
+         winner = "you Lose!";
+     };
 
-    // print to html
-    document.querySelector('#game_level').innerHTML = 4;
-    document.querySelector('#maxNum').innerHTML = maxNumber;
-    document.querySelector('#numberSelected').innerHTML = selectedNumber;
+     gameReward = .75;
+     maxNumber = 60;
 
-    gameTry = '';
-    for (let t = 1; t <= 3; t++) {
-        gameTry += ` <i class="fas fa-hexagon"></i> `;
-        
-        };
-    
-    document.querySelector('#strikes').innerHTML = gameTry;
+     // print to html
+     document.querySelector('#game_level').innerHTML = 3;
+     document.querySelector('#maxNum').innerHTML = maxNumber;
+     document.querySelector('#numberSelected').innerHTML = selectedNumber;
 
+     gameTry = '';
+     for (let t = 1; t <= 2; t++) {
+         gameTry += ` <i class="fas fa-hexagon"></i> `;
 
+     };
 
-    
-} else if (gameLevel === 5) {
-    selectedNumber = Math.floor(Math.random() * 100 + 1);
-    numberInput = '';
-    winner = '';
-    
-    if (selectedNumber === +numberInput) {
-        winner = "you WIN!";
-    } else {
-        winner = "you Lose!";
-    };
-
-    gameReward = 5; 
-    maxNumber = 100;
-   
-    // print to html
-    document.querySelector('#game_level').innerHTML = 5;
-    document.querySelector('#maxNum').innerHTML = maxNumber;
-    document.querySelector('#numberSelected').innerHTML = selectedNumber;
-   
-    gameTry = '';
-    for (let t = 1; t <= 4; t++) {
-        gameTry += ` <i class="fas fa-hexagon"></i> `;
-        
-        };
-    
-    document.querySelector('#strikes').innerHTML = gameTry;
+     document.querySelector('#strikes').innerHTML = gameTry;
 
 
 
-};
 
+
+ } else if (gameLevel === 4) {
+     selectedNumber = Math.floor(Math.random() * 80 + 1);
+     numberInput = '';
+     winner = '';
+
+     if (selectedNumber === +numberInput) {
+         winner = "you WIN!";
+     } else {
+         winner = "you Lose!";
+     };
+
+     gameReward = 1;
+     maxNumber = 80;
+
+     // print to html
+     document.querySelector('#game_level').innerHTML = 4;
+     document.querySelector('#maxNum').innerHTML = maxNumber;
+     document.querySelector('#numberSelected').innerHTML = selectedNumber;
+
+     gameTry = '';
+     for (let t = 1; t <= 3; t++) {
+         gameTry += ` <i class="fas fa-hexagon"></i> `;
+
+     };
+
+     document.querySelector('#strikes').innerHTML = gameTry;
+
+
+
+
+ } else if (gameLevel === 5) {
+     selectedNumber = Math.floor(Math.random() * 100 + 1);
+     numberInput = '';
+     winner = '';
+
+     if (selectedNumber === +numberInput) {
+         winner = "you WIN!";
+     } else {
+         winner = "you Lose!";
+     };
+
+     gameReward = 5;
+     maxNumber = 100;
+
+     // print to html
+     document.querySelector('#game_level').innerHTML = 5;
+     document.querySelector('#maxNum').innerHTML = maxNumber;
+     document.querySelector('#numberSelected').innerHTML = selectedNumber;
+
+     gameTry = '';
+     for (let t = 1; t <= 4; t++) {
+         gameTry += ` <i class="fas fa-hexagon"></i> `;
+
+     };
+
+     document.querySelector('#strikes').innerHTML = gameTry;
+
+
+
+ };
