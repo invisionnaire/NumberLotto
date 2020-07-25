@@ -30,9 +30,9 @@
         </div>
         <div class="card-body text-dark text-center">
           <h4 class="card-title"><small>LVL</small> <span id="game_level"></span></h4>
-          <h1 class="card-text"><span id="numberSelected">?</span></h1>
+          <h1 class="card-text display-1"><span id="numberSelected">?</span></h1>
           <h3><span id="strikes"></span></h3>
-          <h3>Choose a number between 1 and <span id="maxNum"></span></h3>
+          <h4>Choose a number between 1 and <span id="maxNum"></span></h4>
           <div class="form-group">
             <label for="inputNumber"></label>
             <input type="number" class="form-control form-control-sm" name="" id="inputNumber"
@@ -53,7 +53,7 @@
         <li class="list-group-item active">To-do List</li>
 
 
-        <li class="list-group-item bg-danger text-white">There is a bug that if you click out of the modal the game doesnt restart so you see the number, then submit and it saids you WIN. Need to make it reload if you click out of the modal.</li>
+        <li class="list-group-item bg-danger text-white">There is a bug that if you click out of the modal the game doesn't restart so you see the number, then submit and it saids you WIN. Need to make it reload if you click out of the modal.</li>
         <li class="list-group-item">Need to find a way to do a try system where it gives you X tries per level. I also need to find a way that it remembers how many times have you tried the game and it plays and X after x times</li>
         <li class="list-group-item">Need to find a way that it adds x to the balance for the times that they get it correct</li>
         <li class="list-group-item">Need to make so that you can press enter when you type a number.</li>
@@ -117,7 +117,7 @@
           <div class="modal-body text-center">
             <h1 class="display-1"> <i class="fas fa-times-circle"></i></h1>
             <h3>WRONG NUMBER!</h3>
-            <p><b>Sorry, the correct number is <span id="selectedNum"></span> try again!</b></p>
+            <p><b>Try again! You have <span id="triesRemain"></span> try left.</b></p>
           </div>
           <div class="modal-footer">
             <button onclick="reload1()" type="button" class="btn btn-danger">close</button>
