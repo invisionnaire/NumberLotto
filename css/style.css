@@ -1,6 +1,8 @@
 .mediaViewInfo {
 	--web-view-name: main;
 	--web-view-id: main;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-center-horizontally: true;
 	--web-application: true;
@@ -23,6 +25,8 @@
 	overflow: hidden;
 	--web-view-name: main;
 	--web-view-id: main;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-center-horizontally: true;
 	--web-application: true;
@@ -50,7 +54,7 @@
 }
 #Number_Lotto {
 	left: 41px;
-	top: 13px;
+	top: 13.5px;
 	position: absolute;
 	overflow: visible;
 	width: 295px;
@@ -67,7 +71,7 @@
 	width: 219.47px;
 	height: 213.812px;
 	left: 63.5px;
-	top: 139px;
+	top: 120px;
 	overflow: visible;
 }
 #Icon_feather-hexagon {
@@ -194,7 +198,7 @@
 }
 #Choose_a_number_from_x_to_x {
 	left: 54px;
-	top: 455px;
+	top: 465px;
 	position: absolute;
 	overflow: visible;
 	width: 269px;
@@ -221,14 +225,14 @@
 	width: 232px;
 	height: 38px;
 	left: 72px;
-	top: 498px;
+	top: 525px;
 }
 #btn1 {
 	position: absolute;
 	width: 123px;
 	height: 42px;
 	left: 126px;
-	top: 552px;
+	top: 611px;
 	overflow: visible;
 }
 #Rectangle_2 {
