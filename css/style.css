@@ -99,9 +99,9 @@
 #level_span {
 	position: absolute;
 	width: 55.5px;
-	height: 61.654px;
+	height: 63px;
 	left: 0px;
-	top: 15.652px;
+	top: 14.5px;
 	overflow: visible;
 }
 #Icon_feather-hexagon_p {
@@ -109,8 +109,22 @@
 	width: 55.5px;
 	height: 61.654px;
 	left: 0px;
-	top: 0px;
+	top: 1.152px;
 	overflow: visible;
+}
+#ID1_q {
+	left: 10.5px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 29px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: CoconPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(255,255,255,1);
 }
 #try_counter {
 	position: absolute;
@@ -119,24 +133,6 @@
 	left: 67.5px;
 	top: 378px;
 	overflow: visible;
-}
-#Icon_feather-hexagon_r {
-	fill: rgba(44,182,125,1);
-	stroke: rgba(0,0,0,1);
-	stroke-width: 2px;
-	stroke-linejoin: round;
-	stroke-linecap: round;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Icon_feather-hexagon_r {
-	overflow: visible;
-	position: absolute;
-	width: 30.426px;
-	height: 33.665px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
 }
 #Icon_feather-hexagon_s {
 	fill: rgba(44,182,125,1);
@@ -152,7 +148,7 @@
 	position: absolute;
 	width: 30.426px;
 	height: 33.665px;
-	left: 52px;
+	left: 0px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -170,7 +166,7 @@
 	position: absolute;
 	width: 30.426px;
 	height: 33.665px;
-	left: 104px;
+	left: 52px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -188,7 +184,7 @@
 	position: absolute;
 	width: 30.426px;
 	height: 33.665px;
-	left: 156px;
+	left: 104px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -202,6 +198,24 @@
 	shape-rendering: auto;
 }
 .Icon_feather-hexagon_v {
+	overflow: visible;
+	position: absolute;
+	width: 30.426px;
+	height: 33.665px;
+	left: 156px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_feather-hexagon_w {
+	fill: rgba(44,182,125,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Icon_feather-hexagon_w {
 	overflow: visible;
 	position: absolute;
 	width: 30.426px;
