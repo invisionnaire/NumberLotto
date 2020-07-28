@@ -1,0 +1,352 @@
+.mediaViewInfo {
+	--web-view-name: main;
+	--web-view-id: main;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: main;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#main {
+	position: absolute;
+	width: 375px;
+	height: 812px;
+	background-color: rgba(22,22,26,1);
+	overflow: hidden;
+	--web-view-name: main;
+	--web-view-id: main;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+#bg {
+	opacity: 0.02;
+	mix-blend-mode: normal;
+	position: absolute;
+	width: 426.426px;
+	height: 824.676px;
+	left: -14px;
+	top: -12.549px;
+	overflow: hidden;
+}
+#Number_Lotto {
+	left: 41px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 295px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: CoconPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 45px;
+	color: rgba(255,255,254,1);
+}
+#shape1 {
+	position: absolute;
+	width: 219.47px;
+	height: 213.812px;
+	left: 63.5px;
+	top: 139px;
+	overflow: visible;
+}
+#Icon_feather-hexagon {
+	position: absolute;
+	width: 192.47px;
+	height: 213.812px;
+	left: 27px;
+	top: 0px;
+	overflow: visible;
+}
+#level_span {
+	position: absolute;
+	width: 55.5px;
+	height: 61.654px;
+	left: 0px;
+	top: 15.152px;
+	overflow: visible;
+}
+#Icon_feather-hexagon_o {
+	position: absolute;
+	width: 55.5px;
+	height: 61.654px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#try_counter {
+	position: absolute;
+	width: 236.426px;
+	height: 31.578px;
+	left: 67.5px;
+	top: 378px;
+	overflow: visible;
+}
+#Icon_feather-hexagon_q {
+	fill: rgba(44,182,125,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Icon_feather-hexagon_q {
+	overflow: visible;
+	position: absolute;
+	width: 30.426px;
+	height: 33.665px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_feather-hexagon_r {
+	fill: rgba(44,182,125,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Icon_feather-hexagon_r {
+	overflow: visible;
+	position: absolute;
+	width: 30.426px;
+	height: 33.665px;
+	left: 52px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_feather-hexagon_s {
+	fill: rgba(44,182,125,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Icon_feather-hexagon_s {
+	overflow: visible;
+	position: absolute;
+	width: 30.426px;
+	height: 33.665px;
+	left: 104px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_feather-hexagon_t {
+	fill: rgba(44,182,125,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Icon_feather-hexagon_t {
+	overflow: visible;
+	position: absolute;
+	width: 30.426px;
+	height: 33.665px;
+	left: 156px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_feather-hexagon_u {
+	fill: rgba(44,182,125,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Icon_feather-hexagon_u {
+	overflow: visible;
+	position: absolute;
+	width: 30.426px;
+	height: 33.665px;
+	left: 208px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Choose_a_number_from_x_to_x {
+	left: 54px;
+	top: 455px;
+	position: absolute;
+	overflow: visible;
+	width: 269px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: CoconPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#number_input {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.number_input {
+	position: absolute;
+	overflow: visible;
+	width: 232px;
+	height: 38px;
+	left: 72px;
+	top: 498px;
+}
+#btn1 {
+	position: absolute;
+	width: 123px;
+	height: 42px;
+	left: 126px;
+	top: 552px;
+	overflow: visible;
+}
+#Rectangle_2 {
+	fill: rgba(127,90,240,1);
+	stroke: rgba(127,90,240,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 123px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+#Submit {
+	left: 27px;
+	top: 8px;
+	position: absolute;
+	overflow: visible;
+	width: 70px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: CoconPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,254,1);
+}
+#footer {
+	position: absolute;
+	width: 344px;
+	height: 92px;
+	left: 21px;
+	top: 701px;
+	overflow: visible;
+}
+#PP-BTN {
+	position: absolute;
+	width: 78px;
+	height: 89px;
+	left: 266px;
+	top: 0px;
+	overflow: visible;
+	transition: all 0.3s ease-in-out;
+	--web-animation: fadein 0.3s ease-in-out;
+	--web-action-type: view;
+	--web-action-target: main__popup;
+	cursor: pointer;
+}
+#Rectangle_10 {
+	fill: rgba(127,90,240,1);
+}
+.Rectangle_10 {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 33px;
+	top: 48px;
+}
+#Icon_awesome-paypal {
+	fill: rgba(255,255,255,1);
+}
+.Icon_awesome-paypal {
+	overflow: visible;
+	position: absolute;
+	width: 24.622px;
+	height: 29.084px;
+	left: 42px;
+	top: 54px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Balance__0000 {
+	opacity: 0;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 79px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: CoconPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(0,0,0,1);
+}
+#Withdraw {
+	opacity: 0;
+	left: 9px;
+	top: 66px;
+	position: absolute;
+	overflow: visible;
+	width: 61px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: CoconPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	color: rgba(0,0,0,1);
+}
+#Powered_by_Invisionnaire_LLC {
+	left: 0px;
+	top: 77px;
+	position: absolute;
+	overflow: visible;
+	width: 187px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	color: rgba(255,255,255,1);
+}

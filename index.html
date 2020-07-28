@@ -1,189 +1,84 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-VhBcF/php0Z/P5ZxlxaEx1GwqTQVIBu4G4giRWxTKOCjTxsPFETUDdVL5B6vYvOt" crossorigin="anonymous">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <title>Invisionnaire: Number Lotto</title>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>main</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="css/style.css"/>
+<script id="applicationScript" type="text/javascript" src="js/main.js"></script>
 </head>
-
-<body class="bg-dark text-white">
-  <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <div class="card mt-1 mt-md-2 ml-md-3" style="height: 90vh;">
-        <div class="card-header bg-primary">
-          <h1 class="card-title text-center">Number Lotto</h1>
-          <button class="btn btn-dark text-white btn-sm" data-toggle="modal" data-target="#infoModal">i</button>
-        </div>
-        <div class="card-body text-dark text-center">
-          <h4 class="card-title"><small>LVL</small> <span id="game_level"></span></h4>
-          <h1 class="card-text display-1"><span id="numberSelected">?</span></h1>
-          <h3><span id="strikes"></span></h3>
-          <h4>Choose a number between 1 and <span id="maxNum"></span></h4>
-          <div class="form-group">
-            <label for="inputNumber"></label>
-            <input type="number" class="form-control form-control-sm" name="" id="inputNumber"
-              aria-describedby="Number that was chosen">
-          </div>
-          <button type="submit" onclick="startGame()" class="btn btn-primary">Submit</button>
-        </div>
-        <div class="card-footer bg-info d-flex justify-content-between">
-          <h3><span id="playerBalance"></span> Balance: $00.00</h3>
-          <button class="btn btn-outline-light float-right" data-toggle="modal"
-            data-target="#withdrawModal">Withdraw</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-7 mt-2 d-none d-lg-block text-dark">
-      <ul class="list-group">
-        <li class="list-group-item active">To-do List</li>
-
-
-        <li class="list-group-item bg-danger text-white">There is a bug that if you click out of the modal the game doesn't restart so you see the number, then submit and it saids you WIN. Need to make it reload if you click out of the modal.</li>
-        <li class="list-group-item">Need to find a way to do a try system where it gives you X tries per level. I also need to find a way that it remembers how many times have you tried the game and it plays and X after x times</li>
-        <li class="list-group-item">Need to find a way that it adds x to the balance for the times that they get it correct</li>
-        <li class="list-group-item">Need to make so that you can press enter when you type a number.</li>
-
-
-
-        <li class="list-group-item">Change the design to make it look like a cartoon cup head inspire game.</li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-      </ul>
-    </div>
-
-    <!-- Withdraw Modals -->
-    <div class="modal fade text-dark" id="withdrawModal" tabindex="-1" role="dialog" aria-labelledby="withdrawModal"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header bg-info">
-            <h5 class="modal-title" id="withdrawModal">Withdraw</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <h3>Please add your Paypal.me link so that we can deposit the funds!</h3>
-            <input class="form-control" type="text" placeholder="i.e Paypal.me/invisionnaire">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-      <!-- Correct Modals -->
-      <div class="modal fade text-white" id="correctModal" tabindex="-1" role="dialog" aria-labelledby="correctModal"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content bg-success">
-          <div class="modal-body text-center">
-            <h1 class="display-1"> <i class="fas fa-money-bill"></i></h1>
-            <h3>Correct NUMBER!</h3>
-            <p><b>You are a winner, you win $X. Keep Playing to win more.</b></p>
-          </div>
-          <div class="modal-footer">
-            <button onclick="reload1()" type="button" class="btn btn-success">close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Wrong Modals -->
-    <div class="modal fade text-white" id="wrongModal" tabindex="-1" role="dialog" aria-labelledby="withdrawModal"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content bg-danger">
-          <div class="modal-body text-center">
-            <h1 class="display-1"> <i class="fas fa-times-circle"></i></h1>
-            <h3>WRONG NUMBER!</h3>
-            <p><b>Try again! You have <span id="triesRemain"></span> try left.</b></p>
-          </div>
-          <div class="modal-footer">
-            <button onclick="reload1()" type="button" class="btn btn-danger">close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ad Modals -->
-    <div class="modal fade text-dark" id="wrongModal" tabindex="-1" role="dialog" aria-labelledby="withdrawModal"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header bg-info">
-            <h5 class="modal-title" id="withdrawModal">Ad</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <h3>Please add your Paypal.me link so that we can deposit the funds!</h3>
-            <input class="form-control" type="text" placeholder="i.e Paypal.me/invisionnaire">
-          </div>
-          <div class="modal-footer">
-            <button onclick="reload1()" type="button" class="btn btn-danger">close</button>
-          </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Information modal -->
-    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModal" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header bg-dark">
-            <h5 class="modal-title" id="infoModal">Information</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-dark ">
-            <h3>Information for here</h3>
-          </div>
-          <div class="modal-footer">
-            <button onclick="reload1()" type="button" class="btn btn-danger">close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- Optional JavaScript -->
-    <script src="js/main.js"></script>
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+<body>
+<div id="main">
+	<img id="bg" src="bg.png" srcset="bg.png 1x">
+	<div id="Number_Lotto">
+		<span>Number Lotto</span>
+	</div>
+	<div id="shape1">
+		<img id="Icon_feather-hexagon" src="Icon_feather-hexagon.png" srcset="Icon_feather-hexagon.png 1x">
+		<div id="level_span">
+			<img id="Icon_feather-hexagon_o" src="Icon_feather-hexagon_o.png" srcset="Icon_feather-hexagon_o.png 1x">
+		</div>
+	</div>
+	<div id="try_counter">
+		<svg class="Icon_feather-hexagon_q" viewBox="4.5 3.003 28.426 31.578">
+			<path id="Icon_feather-hexagon_q" d="M 32.92583084106445 25.10881614685059 L 32.92583084106445 12.4751148223877 C 32.92467498779297 11.34787368774414 32.32283782958984 10.30669403076172 31.34661865234375 9.743074417114258 L 20.29212951660156 3.426224946975708 C 19.31490707397461 2.862027406692505 18.11092376708984 2.862027406692505 17.13370323181152 3.426225900650024 L 6.079214096069336 9.743076324462891 C 5.1029953956604 10.30669403076172 4.501158714294434 11.34787368774414 4.500001907348633 12.47511291503906 L 4.500001907348633 25.10881614685059 C 4.501158714294434 26.23605537414551 5.1029953956604 27.2772331237793 6.079215049743652 27.84085273742676 L 17.13370323181152 34.15770721435547 C 18.11092376708984 34.72190856933594 19.31490898132324 34.72190856933594 20.2921314239502 34.15770721435547 L 31.34661674499512 27.84085464477539 C 32.32284164428711 27.27723503112793 32.92467880249023 26.23605537414551 32.92583465576172 25.10881614685059 Z">
+			</path>
+		</svg>
+		<svg class="Icon_feather-hexagon_r" viewBox="4.5 3.003 28.426 31.578">
+			<path id="Icon_feather-hexagon_r" d="M 32.92583084106445 25.10881614685059 L 32.92583084106445 12.4751148223877 C 32.92467498779297 11.34787368774414 32.32283782958984 10.30669403076172 31.34661865234375 9.743074417114258 L 20.29212951660156 3.426224946975708 C 19.31490707397461 2.862027406692505 18.11092376708984 2.862027406692505 17.13370323181152 3.426225900650024 L 6.079214096069336 9.743076324462891 C 5.1029953956604 10.30669403076172 4.501158714294434 11.34787368774414 4.500001907348633 12.47511291503906 L 4.500001907348633 25.10881614685059 C 4.501158714294434 26.23605537414551 5.1029953956604 27.2772331237793 6.079215049743652 27.84085273742676 L 17.13370323181152 34.15770721435547 C 18.11092376708984 34.72190856933594 19.31490898132324 34.72190856933594 20.2921314239502 34.15770721435547 L 31.34661674499512 27.84085464477539 C 32.32284164428711 27.27723503112793 32.92467880249023 26.23605537414551 32.92583465576172 25.10881614685059 Z">
+			</path>
+		</svg>
+		<svg class="Icon_feather-hexagon_s" viewBox="4.5 3.003 28.426 31.578">
+			<path id="Icon_feather-hexagon_s" d="M 32.92583084106445 25.10881614685059 L 32.92583084106445 12.4751148223877 C 32.92467498779297 11.34787368774414 32.32283782958984 10.30669403076172 31.34661865234375 9.743074417114258 L 20.29212951660156 3.426224946975708 C 19.31490707397461 2.862027406692505 18.11092376708984 2.862027406692505 17.13370323181152 3.426225900650024 L 6.079214096069336 9.743076324462891 C 5.1029953956604 10.30669403076172 4.501158714294434 11.34787368774414 4.500001907348633 12.47511291503906 L 4.500001907348633 25.10881614685059 C 4.501158714294434 26.23605537414551 5.1029953956604 27.2772331237793 6.079215049743652 27.84085273742676 L 17.13370323181152 34.15770721435547 C 18.11092376708984 34.72190856933594 19.31490898132324 34.72190856933594 20.2921314239502 34.15770721435547 L 31.34661674499512 27.84085464477539 C 32.32284164428711 27.27723503112793 32.92467880249023 26.23605537414551 32.92583465576172 25.10881614685059 Z">
+			</path>
+		</svg>
+		<svg class="Icon_feather-hexagon_t" viewBox="4.5 3.003 28.426 31.578">
+			<path id="Icon_feather-hexagon_t" d="M 32.92583084106445 25.10881614685059 L 32.92583084106445 12.4751148223877 C 32.92467498779297 11.34787368774414 32.32283782958984 10.30669403076172 31.34661865234375 9.743074417114258 L 20.29212951660156 3.426224946975708 C 19.31490707397461 2.862027406692505 18.11092376708984 2.862027406692505 17.13370323181152 3.426225900650024 L 6.079214096069336 9.743076324462891 C 5.1029953956604 10.30669403076172 4.501158714294434 11.34787368774414 4.500001907348633 12.47511291503906 L 4.500001907348633 25.10881614685059 C 4.501158714294434 26.23605537414551 5.1029953956604 27.2772331237793 6.079215049743652 27.84085273742676 L 17.13370323181152 34.15770721435547 C 18.11092376708984 34.72190856933594 19.31490898132324 34.72190856933594 20.2921314239502 34.15770721435547 L 31.34661674499512 27.84085464477539 C 32.32284164428711 27.27723503112793 32.92467880249023 26.23605537414551 32.92583465576172 25.10881614685059 Z">
+			</path>
+		</svg>
+		<svg class="Icon_feather-hexagon_u" viewBox="4.5 3.003 28.426 31.578">
+			<path id="Icon_feather-hexagon_u" d="M 32.92583084106445 25.10881614685059 L 32.92583084106445 12.4751148223877 C 32.92467498779297 11.34787368774414 32.32283782958984 10.30669403076172 31.34661865234375 9.743074417114258 L 20.29212951660156 3.426224946975708 C 19.31490707397461 2.862027406692505 18.11092376708984 2.862027406692505 17.13370323181152 3.426225900650024 L 6.079214096069336 9.743076324462891 C 5.1029953956604 10.30669403076172 4.501158714294434 11.34787368774414 4.500001907348633 12.47511291503906 L 4.500001907348633 25.10881614685059 C 4.501158714294434 26.23605537414551 5.1029953956604 27.2772331237793 6.079215049743652 27.84085273742676 L 17.13370323181152 34.15770721435547 C 18.11092376708984 34.72190856933594 19.31490898132324 34.72190856933594 20.2921314239502 34.15770721435547 L 31.34661674499512 27.84085464477539 C 32.32284164428711 27.27723503112793 32.92467880249023 26.23605537414551 32.92583465576172 25.10881614685059 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Choose_a_number_from_x_to_x">
+		<span>Choose a number from x to x</span>
+	</div>
+	<svg class="number_input">
+		<rect id="number_input" rx="19" ry="19" x="0" y="0" width="232" height="38">
+		</rect>
+	</svg>
+	<div id="btn1">
+		<svg class="Rectangle_2">
+			<rect id="Rectangle_2" rx="5" ry="5" x="0" y="0" width="123" height="42">
+			</rect>
+		</svg>
+		<div id="Submit">
+			<span>Submit</span>
+		</div>
+	</div>
+	<div id="footer">
+		<div onclick="application.goToTargetView(event)" id="PP-BTN">
+			<svg class="Rectangle_10">
+				<rect id="Rectangle_10" rx="20.5" ry="20.5" x="0" y="0" width="41" height="41">
+				</rect>
+			</svg>
+			<svg class="Icon_awesome-paypal" viewBox="0.006 2.06 24.622 29.084">
+				<path id="Icon_awesome-paypal" d="M 7.144962310791016 19.15810012817383 C 6.920495510101318 20.38946151733398 6.029042720794678 26.12939453125 5.766096115112305 27.7519645690918 C 5.746855735778809 27.86740684509277 5.701962471008301 27.91229820251465 5.573696136474609 27.91229820251465 L 0.7893497943878174 27.91229820251465 C 0.3019365668296814 27.91229820251465 -0.0507967472076416 27.4890193939209 0.01333658117800951 27.02084541320801 L 3.771549463272095 3.169661283493042 C 3.867749452590942 2.553981304168701 4.419296264648438 2.085808038711548 5.054216384887695 2.085808038711548 C 14.82172012329102 2.085808038711548 15.64262866973877 1.848514795303345 18.13741493225098 2.816927909851074 C 21.99183082580566 4.311234474182129 22.34456253051758 7.915527820587158 20.95928192138672 11.81483364105225 C 19.58041572570801 15.82957935333252 16.30961418151855 17.55476760864258 11.97420120239258 17.6060733795166 C 9.190814971923828 17.65096855163574 7.516935348510742 17.15714073181152 7.144961833953857 19.15810012817383 Z M 22.90252113342285 9.929312705993652 C 22.78708076477051 9.845939636230469 22.74218940734863 9.813873291015625 22.71012115478516 10.01268577575684 C 22.58185577392578 10.74380588531494 22.38304328918457 11.45568656921387 22.14574813842773 12.16756629943848 C 19.58682823181152 19.46593856811523 12.49368095397949 18.83101844787598 9.030482292175293 18.83101844787598 C 8.639267921447754 18.83101844787598 8.382735252380371 19.04265975952148 8.331428527832031 19.43387413024902 C 6.882015705108643 28.43819046020508 6.5934157371521 30.31729888916016 6.5934157371521 30.31729888916016 C 6.529282569885254 30.77264595031738 6.817882537841797 31.14461898803711 7.273228645324707 31.14461898803711 L 11.34569454193115 31.14461898803711 C 11.89724159240723 31.14461898803711 12.35258865356445 30.74057769775391 12.46161460876465 30.18903160095215 C 12.50650882720947 29.84271240234375 12.39106750488281 30.58024597167969 13.38513374328613 24.33366012573242 C 13.68014812469482 22.92272758483887 14.3022403717041 23.07023239135742 15.26424121856689 23.07023239135742 C 19.81770896911621 23.07023239135742 23.37069511413574 21.22319412231445 24.42889785766602 15.86806011199951 C 24.84576416015625 13.63622093200684 24.72390747070312 11.28894138336182 22.90252304077148 9.929313659667969 Z">
+				</path>
+			</svg>
+			<div id="Balance__0000">
+				<span>Balance <br/>$00.00</span>
+			</div>
+			<div id="Withdraw">
+				<span>Withdraw</span>
+			</div>
+		</div>
+		<div id="Powered_by_Invisionnaire_LLC">
+			<span>Powered by Invisionnaire LLC</span>
+		</div>
+	</div>
+</div>
 </body>
-
 </html>
