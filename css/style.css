@@ -1,6 +1,6 @@
 .mediaViewInfo {
-	--web-view-name: main;
-	--web-view-id: main;
+	--web-view-name: index;
+	--web-view-id: index;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
@@ -9,7 +9,7 @@
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: main;
+	--web-view-ids: index;
 }
 * {
 	margin: 0;
@@ -17,14 +17,14 @@
 	box-sizing: border-box;
 	border: none;
 }
-#main {
+#index {
 	position: absolute;
 	width: 375px;
 	height: 812px;
 	background-color: rgba(22,22,26,1);
 	overflow: hidden;
-	--web-view-name: main;
-	--web-view-id: main;
+	--web-view-name: index;
+	--web-view-id: index;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
@@ -71,7 +71,7 @@
 	width: 219.47px;
 	height: 213.812px;
 	left: 63.5px;
-	top: 120px;
+	top: 119.5px;
 	overflow: visible;
 }
 #Icon_feather-hexagon {
@@ -82,15 +82,29 @@
 	top: 0px;
 	overflow: visible;
 }
+#ID1 {
+	left: 78.5px;
+	top: 20.5px;
+	position: absolute;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: CoconPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 126px;
+	color: rgba(255,255,255,1);
+}
 #level_span {
 	position: absolute;
 	width: 55.5px;
 	height: 61.654px;
 	left: 0px;
-	top: 15.152px;
+	top: 15.652px;
 	overflow: visible;
 }
-#Icon_feather-hexagon_o {
+#Icon_feather-hexagon_p {
 	position: absolute;
 	width: 55.5px;
 	height: 61.654px;
@@ -106,24 +120,6 @@
 	top: 378px;
 	overflow: visible;
 }
-#Icon_feather-hexagon_q {
-	fill: rgba(44,182,125,1);
-	stroke: rgba(0,0,0,1);
-	stroke-width: 2px;
-	stroke-linejoin: round;
-	stroke-linecap: round;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Icon_feather-hexagon_q {
-	overflow: visible;
-	position: absolute;
-	width: 30.426px;
-	height: 33.665px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
 #Icon_feather-hexagon_r {
 	fill: rgba(44,182,125,1);
 	stroke: rgba(0,0,0,1);
@@ -138,7 +134,7 @@
 	position: absolute;
 	width: 30.426px;
 	height: 33.665px;
-	left: 52px;
+	left: 0px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -156,7 +152,7 @@
 	position: absolute;
 	width: 30.426px;
 	height: 33.665px;
-	left: 104px;
+	left: 52px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -174,7 +170,7 @@
 	position: absolute;
 	width: 30.426px;
 	height: 33.665px;
-	left: 156px;
+	left: 104px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -188,6 +184,24 @@
 	shape-rendering: auto;
 }
 .Icon_feather-hexagon_u {
+	overflow: visible;
+	position: absolute;
+	width: 30.426px;
+	height: 33.665px;
+	left: 156px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_feather-hexagon_v {
+	fill: rgba(44,182,125,1);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Icon_feather-hexagon_v {
 	overflow: visible;
 	position: absolute;
 	width: 30.426px;
