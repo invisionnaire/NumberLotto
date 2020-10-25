@@ -1,0 +1,42 @@
+@font-face {
+    font-family: myfont-CoconPro;
+    src: url(/Cocon-Regular-Font.otf);
+  }
+
+  * {
+      font-family: myfont-CoconPro;
+  }
+
+body{
+    background-color: #16161A;
+    color: white;
+    background-image: url(/img/bg.png);
+}
+
+.sm-box {
+    background-image: url(/img/Icon_feather-hexagon_o.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 1em;
+}
+
+.big-box {
+
+    background-image: url(/img/Icon_feather-hexagon.png);
+    background-position: center center;
+    padding: 3em;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.foot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+}
+
+#game-level {
+    padding: 10px;
+    margin: -10px;
+}

@@ -1,15 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 	<title>Invisionnaire: NumberLotto</title>
+	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-VhBcF/php0Z/P5ZxlxaEx1GwqTQVIBu4G4giRWxTKOCjTxsPFETUDdVL5B6vYvOt" crossorigin="anonymous">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css"
+		integrity="sha384-9ZfPnbegQSumzaE7mks2IYgHoayLtuto3AS6ieArECeaR8nCfliJVuLh/GaQ1gyM" crossorigin="anonymous">
+
+	<!-- MY CSS -->
 	<link rel="stylesheet" href="css/style.css">
+
 </head>
-  <body>
-	  <h1 class="display-1">Lorem, ipsum dolor.</h1>
+
+<body>
+
+	<div id="game" class="container text-center">
+
+		<h1 class="my-4">Number Lotto</h1>
+
+
+		<div class="d-flex justify-content-center">
+			<div class="sm-box">
+				<h4 id="game-level"></h4>
+			</div>
+
+			<div class="big-box text-center">
+				<h1 class="display-2 text-center" id="numberSelected">x</h1id>
+			</div>
+		</div>
+
+		<div class="striker-counter my-4">
+			<p>Tries Left:</p>
+			<p><span id="strikes"></span></p>
+		</div>
+
+		<div class="user-input">
+			<p>Please Chose a number between 1 and 
+				<span id="maxNum"></span>
+			</p>
+
+
+			<input class="form-control" type="number" name="user-input" id="numberSelected" min="1" max="50" placeholder="i.e 7 or 6">
+
+			<a class="btn btn-primary my-4 btn-lg" href="#">Submit</a>
+		</div>
+
+		<footer class="foot">
+			<p>
+				Powered by <a href="www.invisionnaire.com">Invisionnaire LLC &copy; 2020</a>
+			</p>
+		</footer>
 
 
 
@@ -22,10 +70,28 @@
 
 
 
+		<!-- end of game div -->
+	</div>
+	<!-- end of game div -->
 
+
+
+
+
+
+
+	<!-- MY JS -->
 	<script src="js/main.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+</body>
+
 </html>
