@@ -22,7 +22,7 @@
 
 <body>
 
-	<div id="game" class="container text-center">
+	<div id="game" class="container text-center col-md-3 border" style="height: 100vh; background-color:rgba(0, 0, 0, 0.13);">
 
 		<h1 class="my-4">Number Lotto</h1>
 
@@ -48,12 +48,13 @@
 			</p>
 
 
-			<input class="form-control" type="number" name="user-input" id="numberSelected" min="1" max="50" placeholder="i.e 7 or 6">
+			<input class="form-control" type="number" name="user-input" id="numberSelected" min="1" max="50" placeholder="i.e 1 or 6">
 
-			<a class="btn btn-primary my-4 btn-lg" href="#">Submit</a>
+			<a class="btn btn-primary my-4 btn-lg" href="#" data-toggle="modal" data-target="#modelId">Submit</a>
+			<a class="btn btn-danger my-4 btn-lg" href="#" data-toggle="modal" data-target="#loseTest">fail test</a>
 		</div>
 
-		<footer class="foot">
+		<footer class="foot text-center">
 			<p>
 				Powered by <a href="www.invisionnaire.com">Invisionnaire LLC &copy; 2020</a>
 			</p>
@@ -61,12 +62,7 @@
 
 
 
-
-
-
-
-
-
+		
 
 
 
@@ -76,6 +72,48 @@
 
 
 
+<!-- Success Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-success">
+				<h5 class="modal-title">You win!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+			</div>
+			<div class="modal-body">
+				Body
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Lose Modal -->
+<div class="modal fade" id="loseTest" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-danger">
+				<h5 class="modal-title">You Lose!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+			</div>
+			<div class="modal-body">
+				Body
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
